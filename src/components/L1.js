@@ -52,6 +52,7 @@ class L1 extends Component {
 				nt:'/l2'
 			});
 			localStorage.setItem('level','2');
+			localStorage.setItem('l2','0');
 		}
 		else{
 			this.setState({

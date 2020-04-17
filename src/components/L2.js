@@ -20,24 +20,26 @@ class L2 extends Component {
         this.im3=this.im3.bind(this);
     }
 	componentDidMount(){
-        if(this.state.le==='2'){
-            var image1 = document.getElementById("l2bw");
-            var rect1 = image1.getBoundingClientRect();
-            var cx = rect1.left + rect1.width * 0.5;    // find center of first image
-            var cy = rect1.top + rect1.height * 0.5;
-            var ball = document.getElementById("l2ball");
-            var rect2 = ball.getBoundingClientRect();
-            ball.style.display = '';
-            ball.style.position = 'absolute';
-            ball.style.left = cx -rect2.width+ 'px';
-            ball.style.top = cy -rect2.height+ 'px';
-            var code="//Hit the buzzer<br/>//with number same as the output of the program<br/>//Left one is number 1 <br/><br/>#include&ltiostream&gt<br/>using namespace std;<br/>int main()<br/>{<br/>&emsp; int a=0;<br/>&emsp; a++;<br/>&emsp; int t=++a;<br/>&emsp; cout&lt&lta;<br/>}";
-            var cd=document.getElementById("l2code");
-            cd.innerHTML=code;
-            window.addEventListener('mousemove',e=>this.roll(e));
-            document.getElementById("l2tar1").addEventListener('click',e=>this.im1(e));
-            document.getElementById("l2tar2").addEventListener('click',e=>this.im2(e));
-            document.getElementById("l2tar3").addEventListener('click',e=>this.im3(e));
+        var image1 = document.getElementById("l2bw");
+        var rect1 = image1.getBoundingClientRect();
+        var cx = rect1.left + rect1.width * 0.5;    // find center of first image
+        var cy = rect1.top + rect1.height * 0.5;
+        var ball = document.getElementById("l2ball");
+        var rect2 = ball.getBoundingClientRect();
+        ball.style.display = '';
+        ball.style.position = 'absolute';
+        ball.style.left = cx -rect2.width+ 'px';
+        ball.style.top = cy -rect2.height+ 'px';
+        var code="//Hit the buzzer<br/>//with number same as the output of the program<br/>//Left one is number 1 <br/><br/>#include&ltiostream&gt<br/>using namespace std;<br/>int main()<br/>{<br/>&emsp; int a=0;<br/>&emsp; a++;<br/>&emsp; int t=++a;<br/>&emsp; cout&lt&lta;<br/>}";
+        var cd=document.getElementById("l2code");
+        cd.innerHTML=code;
+        window.addEventListener('mousemove',e=>this.roll(e));
+        document.getElementById("l2tar1").addEventListener('click',e=>this.im1(e));
+        document.getElementById("l2tar2").addEventListener('click',e=>this.im2(e));
+        document.getElementById("l2tar3").addEventListener('click',e=>this.im3(e));
+        if(localStorage.getItem('l2')==='0'){
+            localStorage.setItem('l2','1');
+            window.location.reload(false);
         }
     }
     roll(e){

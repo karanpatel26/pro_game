@@ -8,7 +8,7 @@ import L3 from './components/L3';
 import L4 from './components/L4';
 import L5 from './components/L5';
 import Nf from './components/Nf';
-import PR from './components/PR';
+//import PR from './components/PR';
 
 class App extends Component {
 	render() {

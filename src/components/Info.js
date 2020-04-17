@@ -35,7 +35,7 @@ class Info extends Component {
 					Note: Play the game in full screen mode or atleast maximized mode. 
 				</p>
 				<Link
-					to={'/l'+localStorage.getItem('level')}
+					to='/l1'
 					id='ibn'
 				>
 					Start Game
