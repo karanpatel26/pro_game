@@ -7,6 +7,7 @@ import L2 from './components/L2';
 import L3 from './components/L3';
 import L4 from './components/L4';
 import L5 from './components/L5';
+import L6 from './components/L6';
 import Nf from './components/Nf';
 //import PR from './components/PR';
 
@@ -24,6 +25,7 @@ class App extends Component {
 				<Route exact path='/l3' component={L3}/>
 				<Route exact path='/l4' component={L4}/>
 				<Route exact path='/l5' component={L5}/>
+				<Route exact path='/l6' component={L6}/>
 				<Route  component={Nf}/>
 				</Switch>
       		</BrowserRouter>
